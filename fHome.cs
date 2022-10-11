@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel;
 using System.Data;
+using System.Media;
 
 namespace Game_mini
 {
+
     public partial class fHome : Form
     {
         public DataTable data = new DataTable();
@@ -16,6 +18,8 @@ namespace Game_mini
                 btn.FlatAppearance.BorderColor = Color.Black;
                 btn.FlatAppearance.BorderSize = 2;
             }
+            Sound.MainSound.PlayLooping();
+            refSoundIcon();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -23,6 +27,7 @@ namespace Game_mini
             fTopic f = new fTopic(data);
             this.Hide();
             f.ShowDialog();
+            refSoundIcon();
             this.Show();
         }
 
@@ -43,6 +48,7 @@ namespace Game_mini
         {
             fRank f = new fRank();
             f.ShowDialog();
+            refSoundIcon();
         }
 
         private void fHome_Load(object sender, EventArgs e)
@@ -134,7 +140,40 @@ namespace Game_mini
             fLearn f = new fLearn(data);
             this.Hide();
             f.ShowDialog();
+            refSoundIcon();
             this.Show();
+        }
+
+        private void ptbSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = false;
+            Sound.MainSound.Stop();
+            refSoundIcon();
+        }
+
+        private void ptbUnSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = true;
+            Sound.MainSound.PlayLooping();
+            refSoundIcon();
+        }
+
+        void refSoundIcon()
+        {
+            if (!Sound.Flag)
+            {
+                ptbSound.Enabled = false;
+                ptbSound.Visible = false;
+                ptbUnSound.Enabled = true;
+                ptbUnSound.Visible = true;
+            }
+            else
+            {
+                ptbSound.Enabled = true;
+                ptbSound.Visible = true;
+                ptbUnSound.Enabled = false;
+                ptbUnSound.Visible = false;
+            }
         }
     }
 }

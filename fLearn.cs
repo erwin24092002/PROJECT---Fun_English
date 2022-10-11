@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
+using System.Media;
 
 namespace Game_mini
 {
@@ -19,6 +20,7 @@ namespace Game_mini
         {
             InitializeComponent();
             data = da;
+            refSoundIcon();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -81,6 +83,38 @@ namespace Game_mini
                 btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                 /*btn.TextImageRelation = TextImageRelation.ImageBeforeText;*/
                 flpLearn.Controls.Add(btn);
+            }
+        }
+
+        private void ptbSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = false;
+            Sound.MainSound.Stop();
+            refSoundIcon();
+        }
+
+        private void ptbUnSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = true;
+            Sound.MainSound.PlayLooping();
+            refSoundIcon();
+        }
+
+        void refSoundIcon()
+        {
+            if (!Sound.Flag)
+            {
+                ptbSound.Enabled = false;
+                ptbSound.Visible = false;
+                ptbUnSound.Enabled = true;
+                ptbUnSound.Visible = true;
+            }
+            else
+            {
+                ptbSound.Enabled = true;
+                ptbSound.Visible = true;
+                ptbUnSound.Enabled = false;
+                ptbUnSound.Visible = false;
             }
         }
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 using System.Reflection;
+using System.Media;
 
 namespace Game_mini
 {
@@ -25,6 +26,10 @@ namespace Game_mini
         public Button[] btnQ = new Button[10];
         public Label[] lbQ = new Label[10];
         int TimeTick = 0;
+        SoundPlayer correctSound = new SoundPlayer("correct.wav");
+        SoundPlayer incorrectSound = new SoundPlayer("incorrect.wav");
+
+
         public fGame(string topicName, DataTable da, string playerName)
         {
             InitializeComponent();
@@ -47,6 +52,7 @@ namespace Game_mini
             lbQ[4] = lbQ4;
             lbQ[5] = lbQ5;
             this.AcceptButton = btnStart;
+            refSoundIcon();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -69,6 +75,8 @@ namespace Game_mini
                 lbQ[round].Visible = true;
                 lbQ[round].Text = dr[index]["En"].ToString();
                 lbQ[round].ForeColor = Color.Green;
+                if(Sound.Flag)
+                    correctSound.Play();
             }
             else
             {
@@ -78,6 +86,8 @@ namespace Game_mini
                 lbQ[round].Visible = true;
                 lbQ[round].Text = dr[index]["En"].ToString();
                 lbQ[round].ForeColor = Color.Firebrick;
+                if(Sound.Flag)
+                    incorrectSound.Play();
             }
             round += 1;
             if (round > 5)
@@ -149,6 +159,36 @@ namespace Game_mini
         {
             TimeTick++;
             txbTime.Text = TimeTick.ToString();
+        }
+
+        private void ptbSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = false;
+            refSoundIcon();
+        }
+
+        private void ptbUnSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = true;
+            refSoundIcon();
+        }
+
+        void refSoundIcon()
+        {
+            if (!Sound.Flag)
+            {
+                ptbSound.Enabled = false;
+                ptbSound.Visible = false;
+                ptbUnSound.Enabled = true;
+                ptbUnSound.Visible = true;
+            }
+            else
+            {
+                ptbSound.Enabled = true;
+                ptbSound.Visible = true;
+                ptbUnSound.Enabled = false;
+                ptbUnSound.Visible = false;
+            }
         }
     }
 }

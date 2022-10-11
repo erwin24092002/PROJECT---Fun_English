@@ -57,10 +57,14 @@
             this.lbQ3 = new System.Windows.Forms.Label();
             this.lbQ4 = new System.Windows.Forms.Label();
             this.lbQ5 = new System.Windows.Forms.Label();
+            this.ptbUnSound = new System.Windows.Forms.PictureBox();
+            this.ptbSound = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVocalImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBoard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUnSound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSound)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -274,7 +278,7 @@
             this.btnQ2.Font = new System.Drawing.Font("Cooper Black", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQ2.ForeColor = System.Drawing.Color.Black;
             this.btnQ2.Image = global::Game_mini.Properties.FormBackground.question;
-            this.btnQ2.Location = new System.Drawing.Point(867, 204);
+            this.btnQ2.Location = new System.Drawing.Point(768, 263);
             this.btnQ2.Name = "btnQ2";
             this.btnQ2.Size = new System.Drawing.Size(93, 53);
             this.btnQ2.TabIndex = 26;
@@ -290,7 +294,7 @@
             this.btnQ3.Font = new System.Drawing.Font("Cooper Black", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQ3.ForeColor = System.Drawing.Color.Black;
             this.btnQ3.Image = global::Game_mini.Properties.FormBackground.question;
-            this.btnQ3.Location = new System.Drawing.Point(966, 204);
+            this.btnQ3.Location = new System.Drawing.Point(768, 322);
             this.btnQ3.Name = "btnQ3";
             this.btnQ3.Size = new System.Drawing.Size(93, 53);
             this.btnQ3.TabIndex = 27;
@@ -306,7 +310,7 @@
             this.btnQ4.Font = new System.Drawing.Font("Cooper Black", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQ4.ForeColor = System.Drawing.Color.Black;
             this.btnQ4.Image = global::Game_mini.Properties.FormBackground.question;
-            this.btnQ4.Location = new System.Drawing.Point(1065, 204);
+            this.btnQ4.Location = new System.Drawing.Point(768, 381);
             this.btnQ4.Name = "btnQ4";
             this.btnQ4.Size = new System.Drawing.Size(93, 53);
             this.btnQ4.TabIndex = 28;
@@ -322,7 +326,7 @@
             this.btnQ5.Font = new System.Drawing.Font("Cooper Black", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQ5.ForeColor = System.Drawing.Color.Black;
             this.btnQ5.Image = global::Game_mini.Properties.FormBackground.question;
-            this.btnQ5.Location = new System.Drawing.Point(1164, 204);
+            this.btnQ5.Location = new System.Drawing.Point(768, 440);
             this.btnQ5.Name = "btnQ5";
             this.btnQ5.Size = new System.Drawing.Size(93, 53);
             this.btnQ5.TabIndex = 29;
@@ -363,62 +367,90 @@
             // lbQ1
             // 
             this.lbQ1.BackColor = System.Drawing.Color.Transparent;
-            this.lbQ1.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbQ1.Location = new System.Drawing.Point(768, 260);
+            this.lbQ1.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbQ1.ForeColor = System.Drawing.Color.Lime;
+            this.lbQ1.Location = new System.Drawing.Point(867, 217);
             this.lbQ1.Name = "lbQ1";
-            this.lbQ1.Size = new System.Drawing.Size(93, 24);
+            this.lbQ1.Size = new System.Drawing.Size(331, 24);
             this.lbQ1.TabIndex = 32;
             this.lbQ1.Text = "label4";
-            this.lbQ1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbQ1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbQ1.Visible = false;
             // 
             // lbQ2
             // 
             this.lbQ2.BackColor = System.Drawing.Color.Transparent;
-            this.lbQ2.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbQ2.Location = new System.Drawing.Point(867, 260);
+            this.lbQ2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbQ2.ForeColor = System.Drawing.Color.Red;
+            this.lbQ2.Location = new System.Drawing.Point(867, 276);
             this.lbQ2.Name = "lbQ2";
-            this.lbQ2.Size = new System.Drawing.Size(93, 24);
+            this.lbQ2.Size = new System.Drawing.Size(331, 24);
             this.lbQ2.TabIndex = 33;
             this.lbQ2.Text = "label5";
-            this.lbQ2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbQ2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbQ2.Visible = false;
             // 
             // lbQ3
             // 
             this.lbQ3.BackColor = System.Drawing.Color.Transparent;
-            this.lbQ3.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbQ3.Location = new System.Drawing.Point(966, 260);
+            this.lbQ3.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbQ3.Location = new System.Drawing.Point(867, 335);
             this.lbQ3.Name = "lbQ3";
-            this.lbQ3.Size = new System.Drawing.Size(93, 24);
+            this.lbQ3.Size = new System.Drawing.Size(331, 24);
             this.lbQ3.TabIndex = 34;
             this.lbQ3.Text = "label6";
-            this.lbQ3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbQ3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbQ3.Visible = false;
             // 
             // lbQ4
             // 
             this.lbQ4.BackColor = System.Drawing.Color.Transparent;
-            this.lbQ4.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbQ4.Location = new System.Drawing.Point(1065, 260);
+            this.lbQ4.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbQ4.Location = new System.Drawing.Point(867, 394);
             this.lbQ4.Name = "lbQ4";
-            this.lbQ4.Size = new System.Drawing.Size(93, 24);
+            this.lbQ4.Size = new System.Drawing.Size(331, 24);
             this.lbQ4.TabIndex = 35;
             this.lbQ4.Text = "label7";
-            this.lbQ4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbQ4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbQ4.Visible = false;
             // 
             // lbQ5
             // 
             this.lbQ5.BackColor = System.Drawing.Color.Transparent;
-            this.lbQ5.Font = new System.Drawing.Font("Cooper Black", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbQ5.Location = new System.Drawing.Point(1164, 260);
+            this.lbQ5.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbQ5.Location = new System.Drawing.Point(867, 453);
             this.lbQ5.Name = "lbQ5";
-            this.lbQ5.Size = new System.Drawing.Size(93, 24);
+            this.lbQ5.Size = new System.Drawing.Size(331, 24);
             this.lbQ5.TabIndex = 36;
             this.lbQ5.Text = "label8";
-            this.lbQ5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbQ5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbQ5.Visible = false;
+            // 
+            // ptbUnSound
+            // 
+            this.ptbUnSound.BackColor = System.Drawing.Color.Transparent;
+            this.ptbUnSound.BackgroundImage = global::Game_mini.Properties.FormBackground.unsound;
+            this.ptbUnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbUnSound.Enabled = false;
+            this.ptbUnSound.Location = new System.Drawing.Point(1209, 12);
+            this.ptbUnSound.Name = "ptbUnSound";
+            this.ptbUnSound.Size = new System.Drawing.Size(61, 60);
+            this.ptbUnSound.TabIndex = 38;
+            this.ptbUnSound.TabStop = false;
+            this.ptbUnSound.Visible = false;
+            this.ptbUnSound.Click += new System.EventHandler(this.ptbUnSound_Click);
+            // 
+            // ptbSound
+            // 
+            this.ptbSound.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSound.BackgroundImage = global::Game_mini.Properties.FormBackground.sound;
+            this.ptbSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbSound.Location = new System.Drawing.Point(1209, 12);
+            this.ptbSound.Name = "ptbSound";
+            this.ptbSound.Size = new System.Drawing.Size(61, 60);
+            this.ptbSound.TabIndex = 37;
+            this.ptbSound.TabStop = false;
+            this.ptbSound.Click += new System.EventHandler(this.ptbSound_Click);
             // 
             // fGame
             // 
@@ -428,6 +460,8 @@
             this.BackgroundImage = global::Game_mini.Properties.FormBackground.fGame;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1282, 683);
+            this.Controls.Add(this.ptbUnSound);
+            this.Controls.Add(this.ptbSound);
             this.Controls.Add(this.lbQ5);
             this.Controls.Add(this.lbQ4);
             this.Controls.Add(this.lbQ3);
@@ -464,6 +498,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbBoard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUnSound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,5 +535,7 @@
         private Label lbQ3;
         private Label lbQ4;
         private Label lbQ5;
+        private PictureBox ptbUnSound;
+        private PictureBox ptbSound;
     }
 }

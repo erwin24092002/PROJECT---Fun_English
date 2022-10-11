@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
+using System.Media;
 
 namespace Game_mini
 {
     public partial class fRank : Form
     {
         public DataTable rank = new DataTable();
-        
 
         public fRank()
         {
@@ -33,6 +33,7 @@ namespace Game_mini
                 string[] infos = line.Split(", ");
                 rank.Rows.Add(infos[0], infos[1], infos[2], infos[3]);
             }
+            refSoundIcon();
         }
 
         private void fRank_Load(object sender, EventArgs e)
@@ -83,6 +84,38 @@ namespace Game_mini
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ptbSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = false;
+            Sound.MainSound.Stop();
+            refSoundIcon();
+        }
+
+        private void ptbUnSound_Click(object sender, EventArgs e)
+        {
+            Sound.Flag = true;
+            Sound.MainSound.PlayLooping();
+            refSoundIcon();
+        }
+
+        void refSoundIcon()
+        {
+            if (!Sound.Flag)
+            {
+                ptbUnSound.Enabled = true;
+                ptbUnSound.Visible = true;
+                ptbSound.Enabled = false;
+                ptbSound.Visible = false;
+            }
+            else
+            {
+                ptbSound.Enabled = true;
+                ptbSound.Visible = true;
+                ptbUnSound.Enabled = false;
+                ptbUnSound.Visible = false;
+            }
         }
     }
 }

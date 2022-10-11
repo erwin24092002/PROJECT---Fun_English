@@ -34,6 +34,10 @@
             this.btnRank = new System.Windows.Forms.Button();
             this.btnLearn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ptbUnSound = new System.Windows.Forms.PictureBox();
+            this.ptbSound = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUnSound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSound)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -110,6 +114,32 @@
             this.label1.Text = "Fun English";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ptbUnSound
+            // 
+            this.ptbUnSound.BackColor = System.Drawing.Color.Transparent;
+            this.ptbUnSound.BackgroundImage = global::Game_mini.Properties.FormBackground.unsound;
+            this.ptbUnSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbUnSound.Enabled = false;
+            this.ptbUnSound.Location = new System.Drawing.Point(1209, 12);
+            this.ptbUnSound.Name = "ptbUnSound";
+            this.ptbUnSound.Size = new System.Drawing.Size(61, 60);
+            this.ptbUnSound.TabIndex = 40;
+            this.ptbUnSound.TabStop = false;
+            this.ptbUnSound.Visible = false;
+            this.ptbUnSound.Click += new System.EventHandler(this.ptbUnSound_Click);
+            // 
+            // ptbSound
+            // 
+            this.ptbSound.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSound.BackgroundImage = global::Game_mini.Properties.FormBackground.sound;
+            this.ptbSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbSound.Location = new System.Drawing.Point(1209, 12);
+            this.ptbSound.Name = "ptbSound";
+            this.ptbSound.Size = new System.Drawing.Size(61, 60);
+            this.ptbSound.TabIndex = 39;
+            this.ptbSound.TabStop = false;
+            this.ptbSound.Click += new System.EventHandler(this.ptbSound_Click);
+            // 
             // fHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -117,6 +147,8 @@
             this.BackgroundImage = global::Game_mini.Properties.FormBackground.fHome;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1282, 683);
+            this.Controls.Add(this.ptbUnSound);
+            this.Controls.Add(this.ptbSound);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLearn);
             this.Controls.Add(this.btnRank);
@@ -129,6 +161,8 @@
             this.Text = "English Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fHome_FormClosing);
             this.Load += new System.EventHandler(this.fHome_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUnSound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +175,7 @@
         private Button btnRank;
         private Button btnLearn;
         private Label label1;
+        private PictureBox ptbUnSound;
+        private PictureBox ptbSound;
     }
 }

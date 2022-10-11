@@ -233,6 +233,16 @@ namespace Game_mini.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sound {
+            get {
+                object obj = ResourceManager.GetObject("sound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap teacher {
             get {
                 object obj = ResourceManager.GetObject("teacher", resourceCulture);
@@ -256,6 +266,16 @@ namespace Game_mini.Properties {
         internal static System.Drawing.Bitmap tutor {
             get {
                 object obj = ResourceManager.GetObject("tutor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unsound {
+            get {
+                object obj = ResourceManager.GetObject("unsound", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
