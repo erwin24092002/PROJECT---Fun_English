@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Game_mini</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Fruits.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Fruits.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Animals.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Animals.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Clothing.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Clothing.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Plants.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Plants.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\FormBackground.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FormBackground.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Vegetables.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Vegetables.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Transportation.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Transportation.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Fruits.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fruits.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Animals.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Animals.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Clothing.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Clothing.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Plants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Plants.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\FormBackground.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormBackground.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Vegetables.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Vegetables.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Transportation.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Transportation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
